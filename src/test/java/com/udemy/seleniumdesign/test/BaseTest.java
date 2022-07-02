@@ -2,6 +2,7 @@ package com.udemy.seleniumdesign.test;
 
 import com.google.common.util.concurrent.Uninterruptibles;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -17,7 +18,8 @@ public class BaseTest {
         System.out.println(
                 "*********************   Create WebDriver Instance - Do not forget system property   *******************"
         );
-        this.driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\ypank\\Downloads\\chromedriver_win32\\chromedriver.exe");
+        this.driver = new ChromeDriver();
     }
 
 
